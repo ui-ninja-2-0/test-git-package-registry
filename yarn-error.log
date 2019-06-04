@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\8.12_LA1\node.exe C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\bin\yarn.js add @codertocat/hello-world-npm -D
+  C:\Program Files\nodejs\8.12_LA1\node.exe C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\bin\yarn.js
 
 PATH: 
   C:\Users\cborkar\Documents\work\v3\test-git-package-registry\node_modules\.bin;C:\Python27\;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Common Files\ThinPrint\;C:\Program Files\Git\Git-2.13.0-64-bit\cmd;c:\Program Files\Git\Git-2.13.0-64-bit\usr\bin;C:\Program Files\KDiff3\0.9.98-2_LA1\;C:\Program Files (x86)\GitExtensions\2.50.01_LA1\;C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\bin\;C:\Program Files (x86)\PuTTY\;C:\Program Files\Maven\3.3.9_LA1\Bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\8.12_LA1\;C:\Users\cborkar\AppData\Local\Android\Sdk\platform-tools;C:\Users\cborkar\AppData\Roaming\npm
@@ -14,37 +14,28 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@codertocat%2fhello-world-npm: Not found
-      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\lib\cli.js:64202:18)
-      at Request.self.callback (C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\lib\cli.js:137468:22)
-      at Request.emit (events.js:188:13)
-      at Request.<anonymous> (C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\lib\cli.js:138440:10)
-      at Request.emit (events.js:188:13)
-      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\lib\cli.js:138362:12)
-      at Object.onceWrapper (events.js:276:13)
-      at IncomingMessage.emit (events.js:193:15)
-      at endReadableNT (_stream_readable.js:1129:12)
-      at process.internalTickCallback (internal/process/next_tick.js:72:19)
+  SyntaxError: C:\Users\cborkar\Documents\work\v3\test-git-package-registry\package.json: Unexpected token } in JSON at position 468
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\lib\cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\lib\cli.js:92:30)
+      at C:\Program Files (x86)\Yarn\yarn-1.9.4_LA1\lib\cli.js:103:13
 
 npm manifest: 
   {
-    "name": "v3-common-components",
-    "version": "1.1.0",
-    "description": "Lord Abbett common components store",
+    "name": "@ui-ninja-2-0/common-components",
+    "version": "1.0.0",
+    "description": "common components library",
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/chiragBorkarEV/v3-storybook.git"
+      "url": "git+https://github.com/ui-ninja-2-0/test-git-package-registry"
     },
     "scripts": {
       "prepublishOnly": "babel ./src --out-dir ./dist -s inline",
       "build": "webpack",
       "start": "webpack --watch",
-      "storybook": "start-storybook",
-      "build-storybook": "build-storybook -c .storybook",
       "deploy-storybook": "storybook-to-ghpages",
       "deploy-aws-storybook": "storybook-to-aws-s3",
-      "styleguide": "styleguidist server",
-      "styleguide:build": "styleguidist build -o docs"
     },
     "storybook-deployer": {
       "gitUsername": "chiragBorkarEV",
@@ -63,21 +54,13 @@ npm manifest:
       "@babel/preset-env": "^7.4.5",
       "@babel/preset-react": "^7.0.0",
       "@material-ui/core": "^4.0.1",
-      "@storybook/addon-a11y": "^5.0.11",
-      "@storybook/addon-actions": "^5.0.11",
-      "@storybook/addon-backgrounds": "^5.0.11",
-      "@storybook/addon-knobs": "^5.0.11",
-      "@storybook/react": "^5.0.11",
-      "@storybook/storybook-deployer": "^2.8.1",
       "axios": "^0.19.0",
       "babel-loader": "^8.0.6",
       "prop-types": "^15.7.2",
-      "react-styleguidist": "^9.1.2",
       "webpack": "^4.32.2",
       "webpack-cli": "^3.3.2"
     },
     "dependencies": {
-      "@storybook/addon-viewport": "^5.0.11",
       "react": "^16.8.6",
       "react-dom": "^16.8.6"
     },
