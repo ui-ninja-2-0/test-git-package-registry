@@ -1,0 +1,5 @@
+Yield example:
+
+```js
+<Yield />
+```

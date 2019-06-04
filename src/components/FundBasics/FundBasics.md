@@ -1,0 +1,5 @@
+FundBasics example:
+
+```js
+<FundBasics />
+```
